@@ -1,7 +1,7 @@
 <template>
      <div>
          <cyh-navbar title="布局">
-         <router-link to="/button" slot="left">
+         <router-link to="/index" slot="left">
              <cyh-icon name="back"></cyh-icon>
          </router-link>
          <span slot="right">

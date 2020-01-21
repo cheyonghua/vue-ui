@@ -1,6 +1,6 @@
 <template>
     <div>
-       <div class="cell">
+       <div class="cell" @click="handClick">
          <div class="cyh-cell-mask">{{title}}</div> 
          <div class="cyh-cell-content">{{value}}</div> 
          <div class="cyh-cell-link" v-if="islink">
@@ -18,6 +18,19 @@ export default {
         islink:{
             type:Boolean,
             default:false
+        },
+        to:String
+    },
+    methods:{
+        handClick(){
+            // debugger
+            //indexof -1 没有出现为-1
+            if(this.to.indexOf('/')==0){
+                // debugger
+                this.$router.push(this.to)
+            }else{
+                window.location.href=this.to
+            }
         }
     }
 }

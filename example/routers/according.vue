@@ -1,7 +1,7 @@
 <template>
     <div>
        <cyh-navbar title="折叠菜单">
-         <router-link to="/button" slot="left">
+         <router-link to="/index" slot="left">
              <cyh-icon name="back"></cyh-icon>
          </router-link>
          <span slot="right">
@@ -17,8 +17,8 @@
         <cyh-according>
           <cyh-according-item title="杜甫">
              <cyh-cell islink title="薛之谦" value="认真的血"></cyh-cell>
-              <cyh-cell islink title="薛之谦" value="认真的血"></cyh-cell>
-               <cyh-cell islink title="薛之谦" value="认真的血"></cyh-cell>
+             <cyh-cell islink title="薛之谦" value="认真的血"></cyh-cell>
+             <cyh-cell islink title="薛之谦" value="认真的血"></cyh-cell>
           </cyh-according-item>
         </cyh-according>
     </div>

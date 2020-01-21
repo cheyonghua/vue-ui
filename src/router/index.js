@@ -1,21 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import button from '../../example/routers/button.vue'
+// import button from '../../example/routers/button.vue'
+import index from '../../example/routers/index.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      //不存在的路径都会redirect'/'
-      path: '*',
+      path: '*', //不存在的路径都会redirect'/'
       redirect: '/'
     },
     {
       path: '/',
-      name: 'button',
-      component: button
+      name: 'index',
+      component: index
       // redirect: '/button'
+    },
+    {
+      path: '/button',
+      name: 'button',
+      component: () =>
+      import('../../example/routers/button.vue')
     },
     {
       path: '/search',

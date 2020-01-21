@@ -1,5 +1,14 @@
 <template>
     <div>
+       <cyh-navbar title="按钮">
+         <router-link to="/index" slot="left">
+             <cyh-icon name="back"></cyh-icon>
+         </router-link>
+         <span slot="right">
+             <cyh-icon name="setting" color="red"></cyh-icon>
+             <cyh-icon name="trash" color="#000"></cyh-icon>
+         </span>
+       </cyh-navbar>
         <cyh-button size="small" inline @click.native="clickSearch">搜索框</cyh-button>
         <cyh-button size="small" inline @click.native="clickTab">分段控件</cyh-button>
         <cyh-button size="small" inline @click.native="clickLayout">布局</cyh-button>
