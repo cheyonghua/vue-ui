@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="cyh-radio" v-for="(item,index) in option" :key="index" @click="select(item)">
-        <p class="cyh-radio-title">{{(item.label)?(item.label):item}}</p>
-        <div class="cyh-radio-checkbox">
+    <div class="pax-radio" v-for="(item,index) in option" :key="index" @click="select(item)">
+        <p class="pax-radio-title">{{(item.label)?(item.label):item}}</p>
+        <div class="pax-radio-checkbox">
             <input type="checkbox" :disabled="item.disabled" :checked="(item.value)?(item.value==value):(item==value)" :true-value="trueValue" :false-value="falseValue">
-            <span class="cyh-radio-span">
+            <span class="pax-radio-span">
                 <i></i>
             </span>
         </div>
@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-    name:'cyh-radio',
+    name:'pax-radio',
     props:{
       options:{
           type:Array
@@ -46,13 +46,13 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.cyh-radio{
+.pax-radio{
  display: flex;
  justify-content:space-between;
  align-items: center;
  height: 40px; 
  padding: 0 10px;
- .cyh-radio-span{
+ .pax-radio-span{
     width:30px;
     height:30px;
     background-color:#EA8E49;

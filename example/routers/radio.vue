@@ -1,19 +1,19 @@
 <template>
     <div>
-       <cyh-navbar title="单元框">
-         <router-link to="/button" slot="left">
-             <cyh-icon name="back"></cyh-icon>
+       <pax-navbar title="单元框">
+         <router-link to="/index" slot="left">
+             <pax-icon name="back"></pax-icon>
          </router-link>
          <span slot="right">
-             <cyh-icon name="setting" color="red"></cyh-icon>
-             <cyh-icon name="trash" color="#000"></cyh-icon>
+             <pax-icon name="setting" color="red"></pax-icon>
+             <pax-icon name="trash" color="#000"></pax-icon>
          </span>
-       </cyh-navbar>
+       </pax-navbar>
         <!--  有value的单选框-->
-        <cyh-radio :options="option" v-model="val"></cyh-radio>
+        <pax-radio :options="option" v-model="val"></pax-radio>
         <div>选项值:{{val}}</div>
         <!-- 单选框 -->
-        <cyh-radio :options="option2" v-model="val2"></cyh-radio>
+        <pax-radio :options="option2" v-model="val2"></pax-radio>
         <div>选项值:{{val2}}</div>
     </div>
 </template>

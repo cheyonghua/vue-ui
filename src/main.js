@@ -5,10 +5,10 @@ import App from './App'
 import router from './router'
 // px rem适配
 import './flexible.js'
-import cyh from './paxui.js'
+import pax from './paxui.js'
 Vue.config.productionTip = false
 
-Vue.use(cyh)
+Vue.use(pax)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

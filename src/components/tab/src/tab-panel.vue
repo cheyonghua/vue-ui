@@ -1,11 +1,11 @@
 <template>
-    <div class="cyh-tab-panel-item" :class="classes">
+    <div class="pax-tab-panel-item" :class="classes">
        <slot></slot>
     </div>
 </template>
 <script>
 export default {
-    name:'cyh-tab-panel',
+    name:'pax-tab-panel',
     props:{
        label:{
        type:String,
@@ -24,7 +24,7 @@ export default {
     computed:{
      classes(){
         //  debugger
-        return this.$parent.activeIndex===this.tabkey||this.iscurrent?"cyh-tab-active":"";
+        return this.$parent.activeIndex===this.tabkey||this.iscurrent?"pax-tab-active":"";
      }
     },
     methods:{

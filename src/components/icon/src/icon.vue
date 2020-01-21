@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-    name:'cyh-icon',
+    name:'pax-icon',
     props:{
         name:{
             type:String

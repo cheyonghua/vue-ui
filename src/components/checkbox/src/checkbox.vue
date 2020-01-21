@@ -1,12 +1,12 @@
 <template>
-  <div class="cyh-checkbox-content">
-    <div class="cyh-checkbox" v-for="(item,index) in options" :key="index" @click="select(item)">
-        <p class="cyh-radio-title">{{(item.label)?(item.label):item}}</p>
-        <div class="cyh-radio-checkbox">
+  <div class="pax-checkbox-content">
+    <div class="pax-checkbox" v-for="(item,index) in options" :key="index" @click="select(item)">
+        <p class="pax-radio-title">{{(item.label)?(item.label):item}}</p>
+        <div class="pax-radio-checkbox">
           <!-- 如果该选中value存在于父传子value中，也就是>-1，匹配到相应的value,那么checked的值就是true，否则就是false -->
           <!-- 后来发现该input没有用 -->
             <input type="checkbox" :disabled="item.disabled" :checked="(item.value)?(value.indexOf(item.value)>-1?true:false):(value.indexOf(item)>-1?true:false)">
-            <span :class="{'cyh-radio-circel' :value.indexOf(item.value?(item.value):item)>-1}">
+            <span :class="{'pax-radio-circel' :value.indexOf(item.value?(item.value):item)>-1}">
               <i></i>
             </span>
         </div>
@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-    name:'cyh-checkbox',
+    name:'pax-checkbox',
     props:{
       options:{
           type:Array
@@ -61,11 +61,11 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.cyh-checkbox-content{
+.pax-checkbox-content{
   padding-right: 30px;
 }
 
-.cyh-checkbox{
+.pax-checkbox{
  display: flex;
  justify-content:space-between;
  align-items: center;
@@ -75,7 +75,7 @@ export default {
    width:0;
    display: none
  }
- .cyh-radio-circel{
+ .pax-radio-circel{
     width:20px;
     height:20px;
     position: relative;

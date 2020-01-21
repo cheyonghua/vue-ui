@@ -1,13 +1,13 @@
 <template>
     <div>
-       <div class="cyh-search-input">
-          <div class="cyh-search-content">
+       <div class="pax-search-input">
+          <div class="pax-search-content">
              <!-- focus选择器用于选择具有焦点的元素 -->
              <input type="text" ref="input" v-model="currentValue" @focus="focusValue" :placeholder="placeholder">
-             <span class="cyh-search-delete" v-if="currentValue" @click="delteValue">删除</span>
+             <span class="pax-search-delete" v-if="currentValue" @click="delteValue">删除</span>
           </div>
           <!-- 这个控制有没有取消 -->
-          <div v-if="showCancel" class="cyh-search-cancel" > 
+          <div v-if="showCancel" class="pax-search-cancel" > 
               <!-- 这个控制什么时候出现取消 -->
               <span v-if="buttonShow" @click="cancelValue">取消</span>
           </div>
@@ -16,7 +16,7 @@
 </template>
 <script>
 export default {
-    name:"cyh-search",
+    name:"pax-search",
     props:{
         showCancel:{
             type:Boolean,
@@ -68,10 +68,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.cyh-search-input{
+.pax-search-input{
     display:flex;
     align-items: center;
-    .cyh-search-content{
+    .pax-search-content{
         flex: 1;
         display:flex;
         align-items: center;
@@ -81,12 +81,12 @@ export default {
             flex:1;
             caret-color: #EB8A3F;
         }
-        .cyh-search-delete{
+        .pax-search-delete{
             flex-basis: 32px;
             // color:yellow
         }
     }
-    .cyh-search-cancel{
+    .pax-search-cancel{
         flex-basis: 30px;
     }
 }

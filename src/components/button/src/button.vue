@@ -1,90 +1,84 @@
 <template>
-    <button :disabled="disabled" :class="className" :value="value">
-      <span v-if="value">{{value}}</span>
-      <slot v-else></slot>
-    </button>
+  <button :disabled="disabled"
+          :class="className"
+          :value="value">
+    <span v-if="value">{{value}}</span>
+    <slot v-else></slot>
+  </button>
 </template>
 <script>
 export default {
-  name:'cyh-button',
-  props:{
-     type:{
-       default:'primary'
-     },
-     disabled:{
-      type:Boolean,
-      default:false
-     },
-     value:{
-      type:String
-     },
-     inline:{
-      type:Boolean,
-      default:false
-     },
-     size:{
-      default:'medium'
-     }
-  },
-  data(){
-    return{
-     
+  name: 'pax-button',
+  props: {
+    type: {
+      default: 'primary'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    value: {
+      type: String
+    },
+    inline: {
+      type: Boolean,
+      default: false
+    },
+    size: {
+      default: 'medium'
     }
   },
-  computed:{
-    className(){
-      let t=''
-      let type=this.type.toLowerCase()
-      type=' cyh-btn-'+type
-      let size=this.size.toLowerCase()
+  data () {
+    return {}
+  },
+  computed: {
+    className () {
+      let t = '';
+      let type = this.type.toLowerCase()
+      type = ' pax-btn-' + type
+      let size = this.size.toLowerCase()
       // debugger
-      size=' cyh-btn-'+size
-      if(this.inline){
-        t+=' cyh-btn-inline'
-      }else{
-        t+=' cyh-btn-block'
-      } 
-      return t+type+size
+      size = ' pax-btn-' + size
+      if (this.inline) {
+        t += ' pax-btn-inline';
+      } else {
+        t += ' pax-btn-block';
+      }
+      return t + type + size
     }
   },
-  methods:{
-   
-  }
+  methods: {}
 }
 </script>
 <style lang="less">
-.cyh-btn{
-  &-small{
-   min-width:60px;
-   height:28px;
- }
-  &-medium{
-   min-width:76px;
-   height:32px;
+.pax-btn {
+  &-small {
+    min-width: 60px;
+    height: 28px;
   }
-  &-large{
-   min-width:84px;
-   height:42px;
+  &-medium {
+    min-width: 76px;
+    height: 32px;
   }
-  &-primary{
-    background-color: #EB8A3F;
+  &-large {
+    min-width: 84px;
+    height: 42px;
   }
-  &-warning{
+  &-primary {
+    background-color: #eb8a3f;
+  }
+  &-warning {
     background-color: red;
   }
-  &-default{
-    border:1px solid #EB8A3F
+  &-default {
+    border: 1px solid #eb8a3f;
   }
-  &-block{
+  &-block {
     display: block;
-    width:100%
+    width: 100%;
   }
-  &-inline{
-    display: inline-block
+  &-inline {
+    display: inline-block;
   }
 }
-
-
 </style>
-
-

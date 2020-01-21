@@ -1,19 +1,19 @@
 <template>
      <div>
-         <cyh-navbar title="布局">
-         <router-link to="/button" slot="left">
-             <cyh-icon name="back"></cyh-icon>
+         <pax-navbar title="布局">
+         <router-link to="/index" slot="left">
+             <pax-icon name="back"></pax-icon>
          </router-link>
          <span slot="right">
-             <cyh-icon name="setting" color="red"></cyh-icon>
-             <cyh-icon name="trash" color="#000"></cyh-icon>
+             <pax-icon name="setting" color="red"></pax-icon>
+             <pax-icon name="trash" color="#000"></pax-icon>
          </span>
-     </cyh-navbar>
-       <cyh-layout>
+     </pax-navbar>
+       <pax-layout>
         <p slot="top" class="pax-layout-top">头部</p>
         <div v-for="(n,index) in 50" :key="index" style="width:100%;height:30px;background-color:#ccc;margin:10px 0"></div>
         <p slot="bottom" class="pax-layout-bottom">底部</p>
-    </cyh-layout>
+    </pax-layout>
      </div>
 </template>
 <style lang="less" scoped>

@@ -1,17 +1,12 @@
 <template>
-      <div class="cyh-according">
-          <slot></slot>
-      </div>
+    <div class="pax-according">
+        <slot></slot>
+    </div>
 </template>
 <script>
 export default {
-    name:'cyh-according',
-    props:{
-
-    },
-    methods:{
- 
-    }
+  name: 'pax-according',
+  props: {},
+  methods: {}
 }
 </script>
-

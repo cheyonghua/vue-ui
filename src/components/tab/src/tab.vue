@@ -1,18 +1,18 @@
 <template>
    <div>
      <ul>
-       <li class="cyh-tab-item" v-for="(item,index) in arr" :key="index" :class="item.tabkey===activeIndex||index===activeIndex?'cyh-tab-active':''" @click="clickTab(item.tabkey,index)">
+       <li class="pax-tab-item" v-for="(item,index) in arr" :key="index" :class="item.tabkey===activeIndex||index===activeIndex?'pax-tab-active':''" @click="clickTab(item.tabkey,index)">
         {{item.label}}
        </li>
      </ul>
-     <div class="cyh-tab-panel">
+     <div class="pax-tab-panel">
          <slot></slot>
      </div>
    </div>
 </template>
 <script>
 export default {
-    name:'cyh-tab',
+    name:'pax-tab',
     props:{
      value:[Number,String]
     },
@@ -26,7 +26,7 @@ export default {
       value(val){
         // debugger
         let tabDetail=this.$children.filter(item=>
-           item.$options.name==='cyh-tab-panel'
+           item.$options.name==='pax-tab-panel'
          )
         //  debugger
         // 这个是为了没有tabkey情况下，index
@@ -59,7 +59,7 @@ export default {
         init(){
          this.arr=[]
          let tabDetail=this.$children.filter(item=>
-           item.$options.name==='cyh-tab-panel'
+           item.$options.name==='pax-tab-panel'
          )
          tabDetail.map(item=>{
           this.arr.push({

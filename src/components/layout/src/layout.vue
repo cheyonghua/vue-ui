@@ -1,7 +1,7 @@
 <template>
      <section id="layout">
         <slot name="top"></slot>
-        <section class="cyh-layout-section">
+        <section class="pax-layout-section">
             <slot></slot>
         </section>
         <slot name="bottom"></slot>
@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-    name:"cyh-layout"
+    name:"pax-layout"
 }
 </script>
 
@@ -19,7 +19,7 @@ export default {
     flex-direction: column;
     width:100%;
     height:100%;
-    .cyh-layout-section{
+    .pax-layout-section{
         flex:1;
         overflow-y: auto
     }

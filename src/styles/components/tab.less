@@ -1,14 +1,14 @@
 ul{
     display: flex;
     align-items: center;
-   .cyh-tab-item{
+   .pax-tab-item{
         height: 44px;
         line-height: 44px;
         width:80px;
         display: flex;
         justify-content: center;
         position: relative;
-        &.cyh-tab-active::after{
+        &.pax-tab-active::after{
         content: "";
         display: block;
         position: absolute;
@@ -21,16 +21,16 @@ ul{
         }
    }
 }
-.cyh-tab-panel{
+.pax-tab-panel{
   position: relative
 }
-.cyh-tab-panel-item{
+.pax-tab-panel-item{
     position: absolute;
     top:0;
     width:100%;
     transform: translateX(100%)
 }
-.cyh-tab-active{
+.pax-tab-active{
     position: relative;
     transform: translateX(0);
     transition: transform .15s
