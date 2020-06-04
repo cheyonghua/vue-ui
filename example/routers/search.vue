@@ -1,26 +1,26 @@
 <template>
-    <div>
-        <pax-navbar title="搜索框">
-            <router-link to="/index"
-                         slot="left">
-                <pax-icon name="back"></pax-icon>
-            </router-link>
-            <span slot="right">
-                <pax-icon name="setting"
-                          color="red"></pax-icon>
-                <pax-icon name="trash"
-                          color="#000"></pax-icon>
-            </span>
-        </pax-navbar>
-        <pax-search showCancel
-                    v-model="value1"
-                    @cancelSearch="cancelDetail"
-                    placeholder="你是我的眼"></pax-search>
-        <pax-cell v-for="(item,index) in myItems"
-                  :title="item"
-                  :key="index"
-                  islink></pax-cell>
-    </div>
+  <div>
+    <pax-navbar title="搜索框">
+      <router-link to="/index"
+                   slot="left">
+        <pax-icon name="back"></pax-icon>
+      </router-link>
+      <span slot="right">
+        <pax-icon name="setting"
+                  color="red"></pax-icon>
+        <pax-icon name="trash"
+                  color="#000"></pax-icon>
+      </span>
+    </pax-navbar>
+    <pax-search showCancel
+                v-model="value1"
+                @cancelSearch="cancelDetail"
+                placeholder="你是我的眼"></pax-search>
+    <pax-cell v-for="(item,index) in myItems"
+              :title="item"
+              :key="index"
+              islink></pax-cell>
+  </div>
 </template>
 <script>
 export default {
