@@ -10,6 +10,8 @@ import {icon} from './components/icon';
 import {navbar} from './components/navbar';
 import {according,accordingItem} from './components/according';
 import {cell} from './components/cell';
+import {mask} from './components/mask';
+import {share} from './components/share'
 const install=function (Vue){
   Vue.component(button.name,button);
   Vue.component(search.name,search);
@@ -22,7 +24,9 @@ const install=function (Vue){
   Vue.component(navbar.name,navbar);
   Vue.component(according.name,according);
   Vue.component(accordingItem.name,accordingItem);
-  Vue.component(cell.name,cell)
+  Vue.component(cell.name,cell);
+  Vue.component(mask.name,mask);
+  Vue.component(share.name,share)
 }
 export default{
   install

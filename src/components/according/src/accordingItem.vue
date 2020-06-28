@@ -1,15 +1,12 @@
 <template>
     <div style="padding:0 10px">
-        <div class="pax-according-header"
-             @click="rotateAccording">
+        <div class="pax-according-header" @click="rotateAccording">
             <div class="pax-according-header-content">{{title}}</div>
-            <div class="pax-according-header-arrow"
-                 :class="show?'pax-according-rotate':''">
+            <div class="pax-according-header-arrow"  :class="show?'pax-according-rotate':''">
                 <pax-icon name="back"></pax-icon>
             </div>
         </div>
-        <div class="pax-according-content"
-             :style="styleHeight">
+        <div class="pax-according-content" :style="styleHeight">
             <div ref="content">
                 <slot></slot>
             </div>
@@ -22,6 +19,13 @@ export default {
   props: {
     title: {
       type: String
+    },
+    open:{
+      type:Boolean,
+      default:false
+    },
+    index:{
+      type:Number
     }
   },
   data () {
@@ -30,15 +34,33 @@ export default {
       styleHeight: { height: 0 }
     }
   },
+  mounted(){
+   this.$nextTick(()=>{
+     this.open&&this.openItem()
+   })
+  },
   methods: {
     rotateAccording () {
-      this.show = !this.show
+      
+      // uid为唯一标识符，自带
+      this.$parent.open(this._uid)
+      this.$emit('passIndex',this.index,this.show)
+      console.log(this._uid,this.show,this.open,888)
       //   debugger
-      if (this.show) {
-        this.styleHeight = { height: this.$refs.content.offsetHeight + 'px' }
-      } else {
-        this.styleHeight = { height: 0 }
-      }
+      // if (this.show) {
+      //   this.styleHeight = { height: this.$refs.content.offsetHeight + 'px' }
+      // } else {
+      //   this.styleHeight = { height: 0 }
+      // }
+    },
+    closeItem(){
+      this.show=false
+      this.styleHeight = { height: 0 }
+    },
+    openItem(){
+      this.show=true
+      console.log(this.show,this.open,12)
+      this.styleHeight= { height: this.$refs.content.offsetHeight + 'px' }
     }
   }
 }

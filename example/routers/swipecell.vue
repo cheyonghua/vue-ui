@@ -11,7 +11,8 @@
                 <span>标题</span>
                 <span>文字</span>
                 <div class="right-button">
-
+                    <pax-button>确定</pax-button>
+                    <pax-button>删除</pax-button>
                 </div>
             </div>
         </div>
@@ -27,6 +28,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .right-button{
+      position: absolute;
+      right: 0;
+      left: 0;
+      display: flex;
+    }
   }
 }
 </style>

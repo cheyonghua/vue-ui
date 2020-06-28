@@ -81,6 +81,18 @@ export default new Router({
     name: 'swipecell',
     component: () =>
         import('../../example/routers/swipecell.vue')
+  },
+  {
+    path: '/account',
+    name: 'account',
+    component: () =>
+        import('../../example/routers/account.vue')
+  },
+  {
+    path: '/share',
+    name: 'share',
+    component: () =>
+        import('../../example/routers/share.vue')
   }
   ]
 })

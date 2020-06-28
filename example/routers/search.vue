@@ -39,7 +39,11 @@ export default {
         '都都',
         '额',
         '嗯嗯',
-        '额额'
+        '额额',
+        'a',
+        'A',
+        'b',
+        'B'
       ]
     }
   },
@@ -53,7 +57,7 @@ export default {
       if (this.value1) {
         //   item.includes(this.value1) 存在结果为true
         // filter不对空数组进行检测，不改变原来数组
-        return this.items.filter(item => item.includes(this.value1))
+        return this.items.filter(item => item.toUpperCase().includes(this.value1.toUpperCase()))
       }
       return this.items
     }
